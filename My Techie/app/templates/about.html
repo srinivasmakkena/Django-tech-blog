@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+{%load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - About</title>
+    <link rel="stylesheet" href={%static "bootstrap/css/bootstrap.min.css"%}>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Roboto:300,400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Roboto:300,400,700">
+    <link rel="stylesheet" href={%static "fonts/font-awesome.min.css"%}>
+    <link rel="stylesheet" href={%static "fonts/simple-line-icons.min.css"%}>
+    <link rel="stylesheet" href={%static "css/Animated-Type-Heading.css"%}>
+    <link rel="stylesheet" href={%static "css/sticky-dark-top-nav-with-dropdown.css"%}>
+    <link rel="stylesheet" href={%static "css/Swipe-Slider-7.css"%}>
+</head>
+
+<body id="page-top" style="color: rgb(240,244,248);"><a class="menu-toggle rounded" href="#"><i class="fa fa-bars"></i></a>
+    <nav class="navbar navbar-light navbar-expand" id="sidebar-wrapper" style="background-image:url({% static 'img/bgnav1.jpg'%}); ">
+        <div class="container"><button data-toggle="collapse" class="navbar-toggler d-none" data-target="#"></button>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav sidebar-nav" id="sidebar-nav">
+                    <li class="nav-item sidebar-brand" role="presentation"><a class="nav-link active js-scroll-trigger" href="/"><h1>My Blog</h1></a></li>
+                    <li class="nav-item sidebar-nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="/"><h4>Home</h4></a></li>
+                    {% if not user.is_authenticated %}
+                    <li class="nav-item sidebar-nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="/login"><h4>Admin</h4></a></li>
+                    {% else %}
+                    <li class="nav-item sidebar-nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="/upload"><h4>Upload</h4></a></li>
+                    <li class="nav-item sidebar-nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="/logout"><h4>Logout</h4></a></li>
+                    {% endif %}
+                </ul>
+          </div>
+      </div>
+    </nav>
+    <section id="about" class="content-section bg-light">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                <h1 class="mx-auto mb-5" style="color: rgb(14,38,62)";> Welcome to our Blog!<br></h1>
+                  <h2 class="mx-auto mb-5" style="color: rgb(0,0,0);filter: blur(0px) contrast(100%) grayscale(1%) hue-rotate(0deg) saturate(107%);"> <u>About Us</u></h2>
+                  <br><br>
+                  <img src="{% static 'img/chandu.jpg' %}" alt="" class="ava"/><br>
+                  <h1 style="color: rgb(0,0,0); vertical-align:middle "><strong>Mohan Chandu Gadiparthi</strong></h1>
+                  <p style="color: rgb(0,0,0);">Chandu is a technocrat who is an autodidact, starvs for knowledge and wisdom.
+                    As a practical person he learned things from different
+                    platforms apart from his career as Electronics and Communications Engineer.
+                    he is a best motivator and a leader.</p>
+                    <p style="color: rgb(0,0,0);"></p>
+                  <footer class="footer text-center" style="background-color: #fffff;filter: saturate(200%);">
+                      <div class="container" style="color: #ffffff;">
+                          <ul class="list-inline mb-5">
+                            <li class="list-inline-item">&nbsp;<a class="text-white social-link rounded-circle" href="https://www.instagram.com/chandugadiparthi"><i class="icon-social-instagram"></i></a></li>
+                            <li class="list-inline-item">&nbsp;<a class="text-white social-link rounded-circle" href="http://www.linkedin.com/in/chandugadiparthi"><i class="icon-social-linkedin"></i></a></li>
+                            <li class="list-inline-item">&nbsp;<a class="text-white social-link rounded-circle" href="https://twitter.com/Chandu6507"><i class="icon-social-twitter"></i></a></li>
+                        </ul>
+                      </div>
+                     </footer>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                   <img src="{% static 'img/sri.png' %}" alt="" class="ava1"/>
+                  <h1 style="color: rgb(0,0,0); vertical-align:middle;"><strong>Srinivas Makkena</strong></h1>
+                  <p style="color: rgb(0,0,0);">Srinivas is a technology enthusiast who likes to keep himself updated with world in technology.He has worked on multiple projects, He dosen't likes to stick to a specific technology when the world is moving agile in terms of technological advancements, so, he keeps learning new things.Apart from technological aspect, Srinivas has an extreme love for public speaking. He loves to share his ideas publicly.</p><p style="color: rgb(0,0,0);">Srinivas is truly passionate about his work and is always eager to connect with other people. While he enjoys all aspects of his job, As he moves with his innovative ideas by collaborative process,so the ideas start to flow and that’s always the fun part for him.</p>
+                  <footer class="footer text-center" style="background-color: #fffff;filter: saturate(200%);">
+                         <div class="container" style="color: #ffffff;">
+                             <ul class="list-inline mb-5">
+                               <li class="list-inline-item">&nbsp;<a class="text-white social-link rounded-circle" href="https://www.instagram.com/srinivas_makkena?r=nametag"><i class="icon-social-instagram"></i></a></li>
+                               <li class="list-inline-item">&nbsp;<a class="text-white social-link rounded-circle" href="https://github.com/srinivasmakkena"><i class="icon-social-github"></i></a></li>
+                              <li class="list-inline-item">&nbsp;<a class="text-white social-link rounded-circle" href="https://www.youtube.com/channel/UCGMAY76T-VR0EURINMsdbrQ "><i class="icon-social-youtube"></i></a></li>
+                          </ul>
+                        </div>
+                    </footer>
+                 </div>
+             </div>
+        </div>
+    </section>
+
+
+    <footer class="footer text-center" style="background-color: #fffff;filter: saturate(200%);">
+         <p class="text-muted mb-0 small">Copyright &nbsp;© My Blog 2020</p>
+       </div><a class="js-scroll-trigger scroll-to-top rounded" href="#page-top"><i class="fa fa-angle-up"></i></a></footer>
+   <script src={% static "js/jquery.min.js"%}></script>
+    <script src={% static "bootstrap/js/bootstrap.min.js"%}></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src={% static "js/stylish-portfolio.js"%}></script>
+    <script src={% static "js/Animated-Type-Heading.js"%}></script>
+    <script src={% static "js/Swipe-Slider-7.js"%}></script>
+</body>
+<style>
+.ava{
+  float:left;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+}
+.ava1{
+  float:right;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+}
+</style>
+
+</html>
